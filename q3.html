@@ -1,0 +1,61 @@
+<!-- STOP  WATCH  USING JAVASCRIPT-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu</title>
+</head>
+
+<body>
+    <h2>STOP WATCH</h2>
+    <h2 id="timer">00:00:00</h2>
+    <button onclick="stopwatch()">Stop</button>
+    <button onclick="startwatch()">Start</button>
+    <button onclick="resetwatch()">Reset</button>
+</body>
+<script>
+     let seconds=0;
+     let minutes=0;
+     let hours=0;
+    let timer = document.getElementById("timer");
+    let t=null;
+    function increasetime() {
+        seconds++;
+        if (seconds == 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes == 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+        timer.innerHTML=`${hours}:${minutes}:${seconds}`
+    }
+
+    function startwatch(){
+        // if(t!==null){
+        //     clearInterval(t)
+        // }
+        t=setInterval(increasetime,1000);
+
+    }
+    function stopwatch(){
+        clearInterval(t)
+
+    }
+
+    function resetwatch(){
+        clearInterval(t);
+        let seconds=0;
+     let minutes=0;
+     let hours=0;
+        timer.innerHTML="00:00:00" 
+    }
+
+
+</script>
+
+</html>

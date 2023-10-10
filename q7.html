@@ -1,0 +1,25 @@
+<!-- WAP to  accept the string and  display number of  charecter on it -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu</title>
+</head>
+<body>
+    <h2>Check the number of charecter</h2>
+    <input type="text" id="textbox" placeholder="enter string">
+    <button onclick="checkchar()">CHECK</button>
+    <h3 id="result"></h3>
+
+    <script>
+    function checkchar(){
+        let charecter = document.getElementById("textbox").value;
+document.getElementById("result").innerHTML=charecter.length
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- WAP to create accept color from user in a textbox the border of the text box should change as per the color entered -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu</title>
+</head>
+<body>
+    <input type="text" placeholder="enter color" id="textbox"> <br> <br>
+    <button onclick="borderchanger()">submit</button>
+    <script>
+function borderchanger(){
+    var textbox= document.getElementById("textbox");
+    textbox.style.border=`2px solid ${textbox.value}`
+}
+    </script>
+</body>
+</html>

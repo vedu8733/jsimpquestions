@@ -1,0 +1,21 @@
+<!-- WAP to display current Date and time -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu</title>
+</head>
+<body>
+    <h2 id="heading">Loading...</h2>
+    <button onclick="show()">Check Current Date and Time</button>
+    <script>
+function show(){
+    var heading = document.getElementById("heading");
+    let date = new Date();
+    heading.innerHTML=date   
+}
+    </script>
+</body>
+</html>

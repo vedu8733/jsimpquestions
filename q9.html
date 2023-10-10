@@ -1,0 +1,31 @@
+<!-- WAP to check whether the entered string is alphanumric or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu | regex</title>
+</head>
+<body>
+    <h2>Check the string is alphanumric or not</h2>
+    <input type="text" id="textbox">
+    <button onclick="display()"> check</button>
+    <h3 id="result"></h3>
+    <script>
+        function isalphanumric(inputstring){
+var regex = /^[a-zA-z0-9]+$/;
+return regex.test(inputstring);
+        }
+        function display(){
+            let  inputstring = document.getElementById("textbox").value;
+            if(isalphanumric(inputstring)){
+                document.getElementById("result").innerHTML="this is alphanumric"
+            }
+            else{
+                document.getElementById("result").innerHTML="this is not alphanumric" 
+            }
+        }
+    </script>
+</body>
+</html>

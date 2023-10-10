@@ -1,0 +1,29 @@
+<!-- WAP to check the entered charecter is consent  and vowels -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu</title>
+</head>
+<body>
+    <h2>Check the entered charecter are vowels or consent</h2>
+    <input type="text"id="textbox">
+    <button onclick="check()">check</button>
+    <h4 id="display"></h4>
+    <script>
+        function check(){
+let char  =  document.getElementById("textbox").value;
+let display =  document.getElementById("display")
+if(char=="a"|| char=="e" || char=="i" || char=="o" || char=="u" || char=="A" || char=="E" || char=="I" || char=="O" || char=="U"){
+    display.innerHTML="Vowel"
+}
+else{
+    display.innerHTML="Consent"
+
+}
+        }
+    </script>
+</body>
+</html>

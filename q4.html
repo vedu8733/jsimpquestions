@@ -1,0 +1,38 @@
+<!-- DIGITAL WATCH using JAVASCRIPT-- -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedu</title>
+</head>
+
+<body>
+    <h2 id="timer">12:00:00</h2>
+    <script>
+        setInterval(() => {
+            let date = new Date();
+            let hour = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let dn = "AM"
+            if (hour > 12) {
+                dn = "PM"
+                hour = hour - 12;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            let timer = document.getElementById("timer");
+            timer.innerHTML = `${hour}:${minutes}:${seconds}  ${dn}`
+        
+        }, 1000);
+    </script>
+</body>
+
+</html>
